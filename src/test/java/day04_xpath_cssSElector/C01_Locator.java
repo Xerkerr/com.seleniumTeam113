@@ -1,4 +1,4 @@
-package day04_xpath_cssSElector;
+package day04_xpath_cssSelector;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -9,13 +9,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 import java.util.List;
 
-//1- https://www.amazon.com/ sayfasına gidin.
-//2- Arama kutusuna “city bike” yazip aratin
-//3- Görüntülenen sonuçların sayısını yazdırın
-//4- Listeden ilk urunun resmine tıklayın.
 public class C01_Locator {
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver","src/resources/chromedriver_win32/chromedriver.exe");
+
+        System.setProperty("webdriver.chrome.driver","src/resources/chromedriver");
         WebDriver driver= new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));

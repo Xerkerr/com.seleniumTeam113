@@ -1,17 +1,19 @@
-package day03_Locators;
+package day03_locators;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.sql.Driver;
 import java.time.Duration;
 import java.util.List;
 
 public class C04_AutomationExercise {
     public static void main(String[] args) {
+
         //1- Bir test class’i olusturun ilgili ayarlari yapin
-        System.setProperty("webdriver.chrome.driver","src/resources/chromedriver_win32/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","src/resources/chromedriver");
         WebDriver driver= new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));

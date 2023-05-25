@@ -1,4 +1,5 @@
 package day05_relativeLocators_maven;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,20 +8,18 @@ import org.openqa.selenium.support.locators.RelativeLocator;
 
 import java.time.Duration;
 
-//1 ) https://www.diemol.com/selenium-4-demo/relative-locators-demo.html adresine gidin
-//2 ) Berlin’i 3 farkli relative locator ile locate edin
-//3 ) Relative locator’larin dogru calistigini test edin
-
 public class C01_RelativeLocators {
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver","src/resources/chromedriver_win32/chromedriver.exe");
-        WebDriver driver= new ChromeDriver();
+
+        System.setProperty("webdriver.chrome.driver","src/resources/chromedriver");
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+
         //1 ) https://www.diemol.com/selenium-4-demo/relative-locators-demo.html  adresine gidin
         driver.get("https://www.diemol.com/selenium-4-demo/relative-locators-demo.html");
         //2 ) Berlin’i  3 farkli relative locator ile locate edin
-        //    aslinda biz Berlin elementini id='pid7 _thumb' seklinde locate edebiliriz
+        //    aslinda biz Berlin elementini id='pid7_thumb' seklinde locate edebiliriz
         //    relative locator, locate edilemeyen webelementler icin tasarlanmistir
         //    biz ornek olmasi icin Berlin elementi uzerinde deniyoruz
         //    (aradigimiz webelementin bir ozelligi) + locate edilebilen bir web element'e gore konumu
